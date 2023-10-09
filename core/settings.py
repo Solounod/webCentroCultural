@@ -51,6 +51,7 @@ PROJECT_APPS = [
     "apps.workshop",
     "apps.events",
     "apps.transparency",
+    "apps.contact",
 ]
 
 THIRD_PARTY_APPS = [
@@ -165,3 +166,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 16,
 }
+
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER ="webcentroculturalelespacio@gmail.com"
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS_USER')
+EMAIL_USE_TLS = True
