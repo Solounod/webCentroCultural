@@ -4,6 +4,7 @@ import { ListenerWorkShop } from "./components/workshop/LIstenerWorkShop";
 import { ListenerTransparency } from "./components/tranparency/ListenerTransparency";
 import { ListenerTheaterPlays } from "./components/events/ListenerTheaterPlays";
 import { DetailTheaterplay } from "./components/events/DetailTheaterplay";
+import { SendEmailContact } from "./components/contact/SendEmailContact";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Transparencias" element={<ListenerTransparency/>}/>
         <Route path="/Eventos" element={<ListenerTheaterPlays/>}/>
         <Route path="/Eventos/:id" element={<DetailTheaterplay/>} />
+        <Route path="/Contacto" element={<SendEmailContact/>} />
       </Routes>
     </BrowserRouter>
   )
