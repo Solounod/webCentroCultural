@@ -14,6 +14,10 @@ export function NewsCart({ news }) {
                 <h2 className=" pt-4 text-2xl">{news.title}</h2>
                 <p> {news.description}</p>
                 <p>Link: {news.link_news}</p>
+                <button onClick={() => {
+                    navigate(`/Noticia/${news.slug}`)
+                    }}>Ver mas
+                </button>
             </div>
             
             

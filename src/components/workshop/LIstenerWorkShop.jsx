@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { getWorkShop, getCategories } from "../../api/apiworkshop";
+import { useNavigate } from "react-router-dom";
+import { LayoutFull } from "../hocs/LayoutFull";
 
 
 export function ListenerWorkShop() {
     const [workshops, setWorkshops] = useState([]);
     const [categories, setCategories] = useState([])
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function loadCategoriesAndWorkshops() {
@@ -32,28 +36,34 @@ export function ListenerWorkShop() {
 
     return (
 
-        <div className="pl-16 pr-16 bg-white pt-6 pb-8">
-        <h2 className="text-3xl font-semibold">Talleres</h2>
-        <hr className="pt-2"/>
         
-        {workshops.map((categoryWorkshops) => (
-            <div key={categoryWorkshops.category.id}>
-                <h3>Categoría: {categoryWorkshops.category.category_workshop}</h3>
-                {categoryWorkshops.workshops.map((workshop) => (
-                    <div className="pt-8 shadow-2xl" key={workshop.id}>
-                        <p>{workshop.id}</p>
-                        <p>{workshop.tittle}</p>
-                        <p>{workshop.image_workshop}</p>
-                        <p>{workshop.slug}</p>
-                        <p>{workshop.facilitator_name}</p>
-                        <p>{workshop.facilitator_link}</p>
-                        <p>{workshop.description}</p>
-                        <p>{workshop.schedules}</p>
-                        <p>{workshop.price}</p>
-                    </div>
-                ))}
-            </div>
-        ))}
-    </div>  
+                <div className="pl-16 pr-16 bg-white pt-6 pb-8">
+                    <h2 className="text-3xl font-semibold">Talleres</h2>
+                    <hr className="pt-2"/>
+
+                    {workshops.map((categoryWorkshops) => (
+                        <div key={categoryWorkshops.category.id}>
+                            <h3>Categoría: {categoryWorkshops.category.category_workshop}</h3>
+                            {categoryWorkshops.workshops.map((workshop) => (
+                                <div className="pt-8 shadow-2xl" key={workshop.id}>
+                                    <p>{workshop.id}</p>
+                                    <p>{workshop.tittle}</p>
+                                    <p>{workshop.image_workshop}</p>
+                                    <p>{workshop.slug}</p>
+                                    <p>{workshop.facilitator_name}</p>
+                                    <p>{workshop.facilitator_link}</p>
+                                    <p>{workshop.description}</p>
+                                    <p>{workshop.schedules}</p>
+                                    <p>{workshop.price}</p>
+                                    <button onClick={() => {
+                                        navigate(`/Talleres/${categoryWorkshops.category.id}/${workshop.slug}`)
+                                    }}>Ver evento
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+        
     )
 }

@@ -6,4 +6,14 @@ class NewsSerializer(serializers.ModelSerializer):
     video_news = serializers.CharField(source='get_video_news')
     class Meta:
         model = News
-        fields = '__all__'
+        fields = [
+            'title',
+            'slug',
+            'description',
+            'image_news',
+            'video_news',
+            'link_news',
+            'datetime_creation',
+            'update_datetime',
+        ]
+

@@ -5,5 +5,5 @@ from .views import *
 
 urlpatterns = [
     path('', NewsListView.as_view()),
-    path('<post_slug>/', NewsDetailView.as_view()),
+    path('<slug>/', DetailNewsView.as_view()),
 ]

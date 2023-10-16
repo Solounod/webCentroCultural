@@ -22,6 +22,16 @@ export const getCategories = async () => {
     }
 };
 
+export const getCategoriesDetailWorkshop = async (id, slug) => {
+    try {
+        const response = await apiCategories.get(`${id}/${slug}`);
+        return response.data.workshop; // 
+    } catch (error) {
+        console.error("Error al obtener categoria:", error);
+        throw error;
+    }
+};
+
 export const getWorkShop = async (id) => {
     try {
         const response = await apiWorkShop.get(`${id}`);

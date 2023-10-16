@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_list_or_404
 
 from rest_framework.views import APIView
+from rest_framework.generics import RetrieveAPIView
 from rest_framework.response import Response
 from rest_framework import status
 
@@ -30,3 +31,7 @@ class NewsDetailView(APIView):
         return Response({'news':serializer.data}, status=status.HTTP_200_OK)
 
 
+class DetailNewsView(RetrieveAPIView):
+    serializer_class = NewsSerializer
+    lookup_field = 'slug'
+    queryset = News.objects.filter()

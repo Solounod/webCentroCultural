@@ -14,3 +14,14 @@ export const getNews = async () => {
         throw error;
     }
 };
+
+export const getDetailNews = async (slug) => {
+    try {
+        const response = await apiNews.get(`${slug}/`);
+        return response.data; // 
+    } catch (error) {
+        console.error("Error al obtener noticias:", error);
+        throw error;
+    }
+};
+
