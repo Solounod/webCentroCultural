@@ -5,10 +5,10 @@ const apiNews = axios.create({
 });
 
 /*export const getNews = () => apiNews.get("/")*/
-export const getNews = async () => {
+export const getNews = async (p) => {
     try {
-        const response = await apiNews.get("/");
-        return response.data.results.news; // 
+        const response = await apiNews.get(`/?p=${p}`);
+        return response.data; // 
     } catch (error) {
         console.error("Error al obtener noticias:", error);
         throw error;

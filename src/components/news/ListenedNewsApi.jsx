@@ -4,27 +4,50 @@ import { NewsCart } from "./NewsCart";
 
 export function ListenedNewsApi() {
     const [newss, setNewss] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
 
     useEffect(() => {
-        async function loadNews() {
-            const newsData = await getNews();
-            console.log(newsData)
-            setNewss(newsData)
+        async function loadNews(page) {
+            const newsData = await getNews(page);
+            console.log(newsData);
+            setNewss(newsData.results.news);
+            setTotalPages(Math.ceil(newsData.count / 3)); 
         }
-        loadNews();
-    }, []);
+        loadNews(currentPage);
+    }, [currentPage]);
 
-    return(
-        <div className="pl-16 pr-16 bg-white pt-6 pb-8">
-            <h2 className="text-3xl font-semibold">Noticias</h2>
-            <hr className="pt-2"/>
-            
+    const handlePageClick = (page) => {
+        setCurrentPage(page);
+    };
+
+    const renderPageNumbers = () => {
+        const pageNumbers = [];
+        for (let i = 1; i <= totalPages; i++) {
+            pageNumbers.push(
+                <button
+                    key={i}
+                    onClick={() => handlePageClick(i)}
+                    className={i === currentPage ? "active" : ""}
+                >
+                    {i}
+                </button>
+            );
+        }
+        return pageNumbers;
+    };
+
+    return (
+        <div className="mt-4">
             {newss.map((news) => (
                 <div className="pt-8 shadow-2xl">
                     <NewsCart news={news}/>
                 </div>
                
                ))}
-        </div>
-    )
-}
+               <div className="pagination">
+                   {renderPageNumbers()}
+               </div>
+           </div>
+       );
+   }

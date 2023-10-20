@@ -30,33 +30,55 @@ export function SendEmailContact() {
             console.log(formData)
             await postEmailContact(formData)
 
+            setFormData({
+                subject: "",
+                email: "",
+                message: "",
+            });
+
         }
 
         handleSubmit(formData)
     }
  
     return (
-        <div>
-            <form onSubmit={e=>onSubmit(e)} action="">
-                <input type="text"
-                        value={subject}
-                        name="subject"
-                        onChange={e=>onChange(e)}
-                        required
-                        placeholder="Asunto" />
-                <input type="email"
-                        value={email}
-                        name="email"
-                        onChange={e=>onChange(e)}
-                        required
-                        placeholder="email" />
-                <input type="text"
-                        value={message}
-                        name="message"
-                        onChange={e=>onChange(e)}
-                        required
-                        placeholder="Mensaje" />
-                <button type="submit">enviar</button>
+        <div className="p-4 m-6">
+
+
+
+            <div className="p-4 flex justify-center"> <h3 className="text-2xl font-semibold pb-4 text-slate-800">Contactanos</h3></div>
+
+            <form  className="p-4 border-2 border-orange-600 shadow-xl rounded-md" onSubmit={e=>onSubmit(e)} action="">
+                <div className="relative border  border-cyan-500 m-5 rounded-md ">
+                    <input type="text"
+                            className="p-4 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-orange-600"
+                            value={subject}
+                            name="subject"
+                            onChange={e=>onChange(e)}
+                            required
+                            placeholder="Asunto" />
+                </div>
+                <div className="border  border-cyan-500 m-5 rounded-md">
+                    <input type="email"
+                            className="p-4 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-orange-600"
+                            value={email}
+                            name="email"
+                            onChange={e=>onChange(e)}
+                            required
+                            placeholder="Email" />
+                </div>
+                <div className="border border-cyan-500 m-5 rounded-md">        
+                    <textarea type="textarea"
+                            className="p-4 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-orange-600"
+                            value={message}
+                            name="message"
+                            onChange={e=>onChange(e)}
+                            required
+                            placeholder="Mensaje" />
+                </div>
+                <div className="p-6 flex justify-center " >      
+                    <button  className="p-4 bg-red-500 rounded-xl text-white font-semibold hover:bg-white hover:border-2 hover:border-red-500 hover:text-red-500" type="submit">Enviar</button>
+                </div>
             </form>
         </div>
     )

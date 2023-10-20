@@ -12,6 +12,7 @@ import { DetailNews } from "./containers/pages/DetailNews";
 function App() {
 
   return (
+    <main className="px-2"> 
     <BrowserRouter>
       <Routes>
         <Route path="/Inicio" element={<Inicio />} />
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Contacto" element={<Contact/>} />
       </Routes>
     </BrowserRouter>
+    </main>
   )
 
 }

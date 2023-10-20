@@ -20,10 +20,10 @@ export const apiLinksByTheaterPlays = axios.create({
 })
 
 
-export const getTeatherPlays = async () => {
+export const getTeatherPlays = async (p) => {
     try {
-        const response = await apiTheaterPlays.get("/");
-        return response.data.results;
+        const response = await apiTheaterPlays.get(`?p=${p}`);
+        return response.data;
     } catch {
         console.error("Error al obtenr el resultado: ", error);
         throw error;
