@@ -20,7 +20,7 @@ export function DetailTheaterplay () {
     }, [])
 
     return (
-        <div>
+        <div className="mt-20">
             <div>
                 <h3>{detailTheaters.title}</h3>
                 <img src={detailTheaters.image} alt="" />

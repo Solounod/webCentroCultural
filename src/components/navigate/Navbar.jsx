@@ -38,7 +38,7 @@ export function Navbar() {
 
 
   return (
-    <nav className={` border-gray-200 ${isNavFixed ? 'fixed  top-0 left-0 w-full px-2' : 'relative'} bg-orange-500`}>
+    <nav className={` border-gray-200 ${isNavFixed ? 'fixed  top-0 left-0 w-full px-2  transition-opacity duration-600 opacity-100' : 'relative '} bg-gradient-to-r from-orange-500 from-10% via-red-500 via-30% to-pink-500 to-90% z-10`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
         <a href="#" class="flex items-center">
           <img src="/logo_espacio.png" class="h-16 mr-3" alt="Logo espacio" />
@@ -51,7 +51,7 @@ export function Navbar() {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" >
-          <ul className="flex flex-col font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-800 md:bg-orange-500 bg-orange-500">
+          <ul className="flex flex-col font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-transparent">
             <li onClick={() => {navigate(`/Inicio`)}}>
               <a href="#" className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Inicio</a>
             </li>
@@ -61,6 +61,9 @@ export function Navbar() {
             </li>
             <li onClick={() => {navigate(`/Eventos`)}}>
               <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Eventos</a>
+            </li>
+            <li onClick={() => {navigate(`/Contacto`)}}>
+              <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contactanos</a>
             </li>
             <li onClick={() => {navigate(`/Transparencias`)}}>
               <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Transparencia</a>

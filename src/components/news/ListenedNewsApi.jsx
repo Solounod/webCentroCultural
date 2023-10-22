@@ -28,7 +28,7 @@ export function ListenedNewsApi() {
                 <button
                     key={i}
                     onClick={() => handlePageClick(i)}
-                    className={i === currentPage ? "active" : ""}
+                    className={i === currentPage ? "active rounded  bg-red-300 px-2 pb-2 pt-1.5 mx-1 hover:bg-red-800 hover:text-white" : "rounded  bg-red-300 px-2 pb-2 pt-1.5  hover:bg-red-800 hover:text-white"}
                 >
                     {i}
                 </button>
@@ -38,16 +38,24 @@ export function ListenedNewsApi() {
     };
 
     return (
-        <div className="mt-4">
+        <section className="mt-4 md:px-12">
+            <div className="">
+             <h2 className="text-4xl font-light uppercase text-red-700 ">Noticias</h2>
+             <hr className="h-px my-4 bg-red-800 border-0" />
+            </div>
+            
+            <br />
             {newss.map((news) => (
                 <div className="pt-8 shadow-2xl">
                     <NewsCart news={news}/>
                 </div>
                
                ))}
-               <div className="pagination">
-                   {renderPageNumbers()}
+               <div className="pagination mt-8 mb-6 flex justify-center">
+                    
+                       {renderPageNumbers()}
+                    
                </div>
-           </div>
+           </section>
        );
    }

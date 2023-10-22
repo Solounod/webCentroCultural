@@ -14,9 +14,11 @@ export function ListenerTransparency(){
     },[])
 
     return (
-        <div className="pl-16 pr-16 bg-white pt-6 pb-8">
-            <h2 className="text-3xl font-semibold">Transparencias</h2>
-            <hr className="pt-2"/>
+        <section className="pl-16 pr-16 bg-white pt-6 pb-8 mt-20">
+            <div className="">
+             <h2 className="text-4xl font-light uppercase text-red-700 ">TRansparencias</h2>
+             <hr className="h-px my-4 bg-red-800 border-0" />
+            </div>
             
             {tranparencies.map((transparency) => (
                 <div className="pt-8 shadow-2xl">
@@ -28,7 +30,7 @@ export function ListenerTransparency(){
                 </div>
                
                ))}
-        </div>
+        </section>
 
     )
 }

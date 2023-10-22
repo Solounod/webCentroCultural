@@ -42,14 +42,17 @@ export function SendEmailContact() {
     }
  
     return (
-        <div className="p-4 m-6">
+        <div className="p-4 m-6  mt-20">
 
 
 
-            <div className="p-4 flex justify-center"> <h3 className="text-2xl font-semibold pb-4 text-slate-800">Contactanos</h3></div>
+<div className="">
+             <h2 className="text-4xl font-light uppercase text-red-700 ">Contactanos</h2>
+             <hr className="h-px my-4 bg-red-800 border-0" />
+            </div>
 
             <form  className="p-4 border-2 border-orange-600 shadow-xl rounded-md" onSubmit={e=>onSubmit(e)} action="">
-                <div className="relative border  border-cyan-500 m-5 rounded-md ">
+                <div className=" border  border-cyan-500 m-5 rounded-md ">
                     <input type="text"
                             className="p-4 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-orange-600"
                             value={subject}

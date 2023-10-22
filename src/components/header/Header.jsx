@@ -2,7 +2,7 @@
 export function Header(){
 
     return (
-        <header className="max-w-full mt-20">
+        <header className="max-w-full">
             <div className="max-w-full h-1/4 ">
                 <img src="/header_img.jpeg" alt="imagen el espacio" className="w-full h-96"/>
             </div>

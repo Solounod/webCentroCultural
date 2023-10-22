@@ -42,27 +42,29 @@ export function ListenerTheaterPlays (){
 
     return (
 
-        <div className="mt-20">
-            <div>
-                <h3 className="p-8">Eventos</h3>
+        <section className="mt-20">
+            <div className="">
+             <h2 className="text-4xl font-light uppercase text-red-700 ">Eventos</h2>
+             <hr className="h-px my-4 bg-red-800 border-0" />
             </div>
             {theaterplays.map((theaterplay) => (
-                <div key={theaterplay.id}>
-                    <h3>{theaterplay.title}</h3>
-                    <div className="">
-                        <img className=" " src={theaterplay.image} alt="" />
+                <article key={theaterplay.id} className=" bg-slate-100 block rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                    
+                    <div className="relative overflow-hidden bg-cover bg-no-repeat z-0  ">
+                        <img className=" w-full rounded-t-lg h-72 transition duration-300 ease-in-out transform scale-100 hover:scale-110" src={theaterplay.image} alt="" />
                     </div>
+                    <h3>{theaterplay.title}</h3>
                     <p>{theaterplay.description}</p>
                     <button onClick={() => {
                         navigate(`/Eventos/${theaterplay.id}`)
                     }}>Ver evento</button>
-                </div>
+                </article>
             ))}
 
                 <div className="pagination">
                    {renderPageNumbers()}
                 </div>
-        </div>
+        </section>
     )
 
 }
