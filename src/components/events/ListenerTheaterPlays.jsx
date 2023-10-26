@@ -31,7 +31,7 @@ export function ListenerTheaterPlays (){
                 <button
                     key={i}
                     onClick={() => handlePageClick(i)}
-                    className={i === currentPage ? "active" : ""}
+                    className={i === currentPage ? "active rounded  bg-red-300 px-2 pb-2 pt-1.5 mx-1 hover:bg-red-800 hover:text-white" : "rounded  bg-red-300 px-2 pb-2 pt-1.5  hover:bg-red-800 hover:text-white"}
                 >
                     {i}
                 </button>
@@ -42,26 +42,37 @@ export function ListenerTheaterPlays (){
 
     return (
 
-        <section className="mt-20">
+        <section className="mt-20 md:mx-20">
             <div className="">
              <h2 className="text-4xl font-light uppercase text-red-700 ">Eventos</h2>
              <hr className="h-px my-4 bg-red-800 border-0" />
             </div>
-            {theaterplays.map((theaterplay) => (
-                <article key={theaterplay.id} className=" bg-slate-100 block rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
-                    
-                    <div className="relative overflow-hidden bg-cover bg-no-repeat z-0  ">
-                        <img className=" w-full rounded-t-lg h-72 transition duration-300 ease-in-out transform scale-100 hover:scale-110" src={theaterplay.image} alt="" />
-                    </div>
-                    <h3>{theaterplay.title}</h3>
-                    <p>{theaterplay.description}</p>
-                    <button onClick={() => {
-                        navigate(`/Eventos/${theaterplay.id}`)
-                    }}>Ver evento</button>
-                </article>
-            ))}
+            <div className="pt-8 md:grid md:grid-cols-3 md:gap-4">
+                {theaterplays.map((theaterplay) => (
+                    <article key={theaterplay.id} className=" border border-gray-300 mb-8 bg-slate-100 block rounded-lg shadow-2xl">
 
-                <div className="pagination">
+                        <div className="  relative overflow-hidden bg-cover bg-no-repeat z-0  ">
+                            <div className="image-container transform scale-100 hover:scale-110">
+                                <img className=" w-full rounded-t-lg h-72 " src={theaterplay.image} alt="" />
+                            </div>
+                        </div>
+                        <div className="relative font-sans p-6 overflow-hidden md:h-72">
+                            <h5 className="mb-2 text-xl font-medium leading-tight text-gray-800 ">{theaterplay.title}</h5>
+                            <div className="md:h-[200px] line-clamp-6">
+                                <p className="mb-4 text-base text-gray-600">{theaterplay.description}</p>
+                            </div>
+                            <div className="md:absolute bottom-4 right-8 h-16 w-30">
+                                <button  className="inline-block rounded bg-red-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-white hover:border-2 hover:border-red-500 hover:text-red-500"  onClick={() => {
+                                    navigate(`/Eventos/${theaterplay.id}`)
+                                }}>Ver evento</button>
+                            </div>
+                        </div>
+                    </article>
+                ))}
+            </div>
+
+                <div className="pagination mt-8 mb-6 flex justify-center">
+                   
                    {renderPageNumbers()}
                 </div>
         </section>

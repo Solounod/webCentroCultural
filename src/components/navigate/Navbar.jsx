@@ -53,7 +53,7 @@ export function Navbar() {
         <div className="hidden w-full md:block md:w-auto" >
           <ul className="flex flex-col font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-transparent">
             <li onClick={() => {navigate(`/Inicio`)}}>
-              <a href="#" className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Inicio</a>
+              <a href="#" className="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0   md:dark:bg-transparent" aria-current="page">Inicio</a>
             </li>
 
             <li onClick={() => {navigate(`/Talleres`)}}>

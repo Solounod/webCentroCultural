@@ -21,7 +21,7 @@ export function ListLinkSocial() {
     return (
         <div>
             {links.map((link) => (
-                <div className="w-10">
+                <div className="w-10 h-10">
                     <a href={link.url}>
                     <img src={link.img} alt="imagen link  " />
                     </a>

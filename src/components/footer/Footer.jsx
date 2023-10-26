@@ -9,14 +9,16 @@ export function Footer(){
                     <img src="/logo_espacio.png" class="h-[16rem] mr-3" alt="Logo espacio" />
                 </div>
                 <section className="p-20 flex justify-center">
-                    <div className="mx-10">
-                        <h5 className="text-white " >Visitanos</h5>
-                        <p className="text-white">3 oriente 7 y 8 norte 1874, Talca, Chile.</p>
+                    <div className="mx-10 text-white font-semibold ">
+                        <h5 className="font-semibold uppercase" >Visitanos:</h5>
+                        <hr />
+                        <p className="">3 oriente 7 y 8 norte 1874, Talca, Chile.</p>
                     </div>
-                    <div>
-                        <h5 className="text-white">Contactanos</h5>            
-                        <p className="text-white">Teléfono: 990564487</p>
-                        <p className="text-white">Correo electrónico: centroculturalelespacio@gmail.com</p>
+                    <div className="text-white font-semibold ">
+                        <h5 className=" uppercase">Contactanos</h5> 
+                        <hr />           
+                        <p className="">Teléfono: 990564487</p>
+                        <p className="">Correo electrónico: centroculturalelespacio@gmail.com</p>
                     </div>
                 </section>
                 <ListLinkSocial/>

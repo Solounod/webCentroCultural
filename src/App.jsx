@@ -1,18 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Inicio } from "./containers/pages/Inicio";
-import { DetailTheaterplay } from "./components/events/DetailTheaterplay";
 import { Workshop } from "./containers/pages/Workshop";
 import { Events } from "./containers/pages/Events";
 import { Transparency } from "./containers/pages/Transparency";
 import { Contact } from "./containers/pages/Contact";
 import { PageDetailWorkshop } from "./containers/pages/PageDetailWorkshop";
 import { DetailNews } from "./containers/pages/DetailNews";
+import { DetailEvents } from "./containers/pages/DetailEvents";
 
 
 function App() {
 
   return (
-    <main className="px-2"> 
+    <main className="bg-white"> 
     <BrowserRouter>
       <Routes>
         <Route path="/Inicio" element={<Inicio />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/Talleres/:id/:slug" element={<PageDetailWorkshop />} />
         <Route path="/Transparencias" element={<Transparency/>}/>
         <Route path="/Eventos" element={<Events/>}/>
-        <Route path="/Eventos/:id" element={<DetailTheaterplay/>} />
+        <Route path="/Eventos/:id" element={<DetailEvents/>} />
         <Route path="/Contacto" element={<Contact/>} />
       </Routes>
     </BrowserRouter>
