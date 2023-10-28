@@ -6,7 +6,7 @@ export function Header(){
             <div className="max-w-full h-1/4 scale-up-center">
                 <img src="/header_img.jpeg" alt="imagen el espacio" className="w-full h-96"/>
             </div>
-            <div className="text-center pl-16 pr-16 mb-12">
+            <div className="text-center pl-16 pr-16 mb-12 ">
                 <div className="text-4xl font-extrabold mt-6 tracking-in-expand-fwd">
                     <spam className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-orange-500 ">Centro Cultural el Espacio</spam>
                 </div>

@@ -12,7 +12,9 @@ export function Inicio() {
             <LayoutFull>
                 <Header/>
                 <ListenedNewsApi/>
-                <SendEmailContact/>
+                <section className="bg-slate-950 pb-1">
+                    <SendEmailContact/>
+                </section>
             </LayoutFull>
         </>
     )

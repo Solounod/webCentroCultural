@@ -12,10 +12,13 @@ export function NewsCart({ news }) {
             </div>
             <div className="relative font-sans p-6 overflow-hidden md:h-96">
                 <h5 className="mb-2 text-xl font-medium leading-tight text-gray-800 ">{news.title}</h5>
-                <div className="md:h-[200px] line-clamp-6"> {/* Limita a 3 líneas */}
-                    <p className="mb-4 text-base text-gray-600">{news.description}</p>
+                <hr className="h-px my-4 bg-red-800 border-0" />
+                <div className="flex justify-end">
+                    <p className="mb-4 text-base text-gray-600">{news.date_creation}</p>
                 </div>
-                <p> {news.link_news}</p>
+                <div className="md:h-[200px] line-clamp-6"> {/* Limita a 3 líneas */}
+                    <p className="mb-4 text-base text-gray-600">{news.head_news}</p>
+                </div>
                 <div className="md:absolute bottom-4 right-8 h-16 w-30">
                     <button className="inline-block rounded bg-red-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-white hover:border-2 hover:border-red-500 hover:text-red-500" onClick={() => navigate(`/Noticia/${news.slug}`)}>
                         Ver más

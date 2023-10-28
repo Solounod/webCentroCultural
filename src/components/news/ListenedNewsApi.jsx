@@ -28,7 +28,7 @@ export function ListenedNewsApi() {
                 <button
                     key={i}
                     onClick={() => handlePageClick(i)}
-                    className={i === currentPage ? "active rounded  bg-red-300 px-2 pb-2 pt-1.5 mx-1 hover:bg-red-800 hover:text-white" : "rounded  bg-red-300 px-2 pb-2 pt-1.5  hover:bg-red-800 hover:text-white"}
+                    className={i === currentPage ? "active rounded  bg-red-300 px-2 pb-2 pt-1.5 mx-1 hover:bg-red-800 hover:text-white" : "rounded  bg-red-300 px-2 pb-2 pt-1.5  hover:bg-red-800 hover:text-white mx-1"}
                 >
                     {i}
                 </button>
@@ -51,7 +51,7 @@ export function ListenedNewsApi() {
                 </div>
                
                ))}
-               <div className="pagination mt-8 mb-6 flex justify-center">
+               <div className="pagination mt-8 mb-6 flex justify-center px-1">
                     
                        {renderPageNumbers()}
                     

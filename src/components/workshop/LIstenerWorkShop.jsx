@@ -37,7 +37,7 @@ export function ListenerWorkShop() {
 
     return (
        
-            <section className="md:mx-20 bg-white pt-6 pb-8 mt-20">
+            <section className=" px-2 md:mx-20 bg-white pt-6 pb-8 mt-20">
                 <div className="">
                     <h2 className="text-4xl font-light uppercase text-red-700 ">Talleres</h2>
                     <hr className="h-px my-4 bg-red-800 border-0" />
@@ -71,7 +71,7 @@ export function ListenerWorkShop() {
                                     <p className="text-gray-800 ">Precios:</p>
                                     <p className="text-sm text-gray-800 ">{workshop.price}</p>
                                     <div className="pt-1 md:absolute bottom-4 right-8 h-8 w-30">
-                                        <button className="inline-block rounded bg-red-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-white hover:border-2 hover:border-red-500 hover:text-red-500" onClick={() => {
+                                        <button className="inline-block rounded bg-red-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white  hover:bg-white hover:border-2 hover:border-red-500 hover:text-red-500" onClick={() => {
                                             navigate(`/Talleres/${categoryWorkshops.category.id}/${workshop.slug}`)}}>Ver
                                         </button>
                                     </div>

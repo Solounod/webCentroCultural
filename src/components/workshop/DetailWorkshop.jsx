@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCategoriesDetailWorkshop } from "../../api/apiworkshop";
 
+
 export function DetailWorkshop(){
     const [detailWorkshops, setDetaiWorkshop] = useState([])
     const params = useParams()
@@ -19,17 +20,46 @@ export function DetailWorkshop(){
 
     return (
         <>
-            <div className="pt-8 shadow-2xl" key={detailWorkshops.id}>
-                                    <p>{detailWorkshops.id}</p>
-                                    <p>{detailWorkshops.tittle}</p>
-                                    <p>{detailWorkshops.image_workshop}</p>
-                                    <p>{detailWorkshops.slug}</p>
+            <section className="pt-40 pb-8 px-16 shadow-2xl gap-2" key={detailWorkshops.id}> 
+                <article className="md:grid md:grid-cols-2">
+                    <div >
+                        <img  className="w-[600px]" src={detailWorkshops.image_workshop} alt="" />
+                    </div>
+                    <div>
+                        <div className="flex">
+                            <h5 className="p-4 w-full bg-indigo-900 text-3xl text-right text-white">{detailWorkshops.tittle}</h5>
+                        </div>
+                        <div className="flex justify-end">
+                            <div className="md:grid md:grid-cols-2  w-60">
+                                <div className="bg-red-600 p-1 text-white">
                                     <p>{detailWorkshops.facilitator_name}</p>
-                                    <p>{detailWorkshops.facilitator_link}</p>
-                                    <p>{detailWorkshops.description}</p>
-                                    <p>{detailWorkshops.schedules}</p>
-                                    <p>{detailWorkshops.price}</p>
-            </div>
+                                </div>
+                                <div className="border border-red-600 p-1  hover:bg-red-200">
+                                    <button className="text-red-600 font-semibold"><a href={detailWorkshops.facilitator_link}>Link</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <p className="p-10 text-slate-800 text-md">{detailWorkshops.description}</p>
+                        <article className="flex justify-end">
+                            <table className="border-collapse border border-slate-500 ">
+                                <thead  >
+                                    <tr className="bg-indigo-500">
+                                        <th className="border border-indigo-600 border-spacing-8 text-white">Horarios</th>
+                                        <th className="border border-indigo-600 border-spacing-8 text-white">Precios</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td className="border border-indigo-600 border-spacing-8 p-1">{detailWorkshops.schedules}</td>
+                                        <td className="border border-indigo-600 border-spacing-8 p-1">{detailWorkshops.price}</td>
+                                    </tr>       
+                                </tbody>
+                            </table>    
+                        </article>
+                    </div>
+                </article>   
+            </section>
+            
         </>
     )
 }
