@@ -35,6 +35,7 @@ export function Navbar() {
   
 
   return (
+    
     <nav className={` border-gray-200 ${isNavFixed ? 'fixed  top-0 left-0 w-full px-2  transition-opacity duration-600 opacity-100' : 'relative '} bg-gradient-to-r from-orange-500 from-10% via-red-500 via-30% to-pink-500 to-90% z-10`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
         <a href="#" class="flex items-center">
@@ -69,10 +70,11 @@ export function Navbar() {
         </div>
 
       </div>
-
       <Dropdown menuClicked={menuClicked} />
-
+      
     </nav>
+    
+    
   )
 }
 

@@ -62,7 +62,7 @@ export const getImgByGallery = async (title_gallery) => {
     }
 }
 
-export const getLinksByTheaterPlays = async () => {
+export const getLinksByTheaterPlays = async (id) => {
     try {
         const response = await apiLinksByTheaterPlays.get(`${id}/`);
         return response.data.results;
