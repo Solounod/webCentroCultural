@@ -7,6 +7,7 @@ import { Contact } from "./containers/pages/Contact";
 import { PageDetailWorkshop } from "./containers/pages/PageDetailWorkshop";
 import { DetailNews } from "./containers/pages/DetailNews";
 import { DetailEvents } from "./containers/pages/DetailEvents";
+import { DetailGalleryGrid } from "./containers/pages/DetailGalleryGrid";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Transparencias" element={<Transparency/>}/>
         <Route path="/Eventos" element={<Events/>}/>
         <Route path="/Eventos/:id" element={<DetailEvents/>} />
+        <Route path="/Eventos/:id/:id/:title_gallery" element={<DetailGalleryGrid/>} />
         <Route path="/Contacto" element={<Contact/>} />
       </Routes>
     </BrowserRouter>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getGallery, getImgByGallery } from "../../api/apiEvents";
 
 export function ListenerGalleryTheaterPlay({ id }) {
@@ -6,6 +7,10 @@ export function ListenerGalleryTheaterPlay({ id }) {
   const [galleryImages, setGalleryImages] = useState([]);
   const [autoSlide, setAutoSlide] = useState(true);
   const autoSlideInterval = 3000;
+
+  const navigate = useNavigate();
+
+  
 
   useEffect(() => {
     async function loadGalleryAndImages() {
@@ -57,36 +62,40 @@ export function ListenerGalleryTheaterPlay({ id }) {
     });
   };
 
+
   useEffect(() => {
-    if (autoSlide) {
+    if (autoSlide && galleryImages.length > 0) {
       const slideInterval = setInterval(() => {
-        // Aquí puedes llamar a la función nextImage para cambiar automáticamente las imágenes
-        // Asegúrate de hacerlo para la galería actual (puedes usar el índice actual)
-        nextImage(0); // Cambia automáticamente la primera galería
-        nextImage(1);
+        console.log(galleryImages.length)
+               
+          galleryImages.map((i, n) => (nextImage(n)))
+          
       }, autoSlideInterval);
 
       return () => clearInterval(slideInterval);
     }
-  }, [autoSlide]);
+  }, [autoSlide, galleryImages]);
 
   return (
     <div>
       {galleryImages.map((galleryData, galleryIndex) => (
-        <div key={galleryData.gallery.id}>
-          <h3>Galeria: {galleryData.gallery.title_gallery}</h3>
-          <div className="flex overflow-x-scroll relative" style={{ width: "50%" }}>
-            <div className="flex space-x-4 w-[1400px]">
+        <div>
+          <div className="flex justify-center p-4 bg-indigo-500 rounded-2xl mb-8 mt-8">
+            <h5 className="text-white font-semibold text-[24px]">{galleryData.gallery.title_gallery}</h5>
+          </div>
+        <div className="flex justify-center" key={galleryData.gallery.id}>
+          
+          <div className="flex overflow-x-scroll relative w-[800px]" >
+            <div className="flex  w-full">
               {galleryData.images.map((img, imageIndex) => (
                 <div
-                  className="transition-transform ease-out duration-500"
+                  className=" transition-transform ease-out duration-3000"
                   key={imageIndex}
                   style={{
-                    display: imageIndex === galleryData.currentImageIndex ? 'block' : 'none',
-                    transform: `translateX(-${galleryIndex}%)`,
+                    display: imageIndex === galleryData.currentImageIndex ? 'block' : 'none'
                   }}
                 >
-                  <img className="w-[600px] h-[500px]" src={img.image_only} alt="" />
+                  <img className="w-[800px] h-[500px] rounded-3xl" src={img.image_only} alt="" />
                 </div>
               ))}
             </div>
@@ -95,16 +104,27 @@ export function ListenerGalleryTheaterPlay({ id }) {
                 onClick={() => prevImage(galleryIndex)}
                 className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
               >
-                Izquierda
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                </svg>
+
               </button>
               <button
                 onClick={() => nextImage(galleryIndex)}
                 className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
               >
-                Derecha
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                </svg>
+
               </button>
             </div>
+            <div className="absolute bottom-4 w-[800px] flex justify-center">
+              <button className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white" 
+              onClick={() => {navigate(`/Eventos/${id}/${galleryData.gallery.id}/${galleryData.gallery.title_gallery}`)}}>Galeria completa</button>
+            </div>
           </div>
+        </div>
         </div>
       ))}
     </div>
