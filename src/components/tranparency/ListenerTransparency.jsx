@@ -16,18 +16,24 @@ export function ListenerTransparency(){
     return (
         <section className="pl-16 pr-16 bg-white pt-6 pb-8 mt-20">
             <div className="">
-             <h2 className="text-4xl font-light uppercase text-red-700 ">TRansparencias</h2>
+             <h2 className="text-4xl font-light uppercase text-red-700 ">Transparencias</h2>
              <hr className="h-px my-4 bg-red-800 border-0" />
             </div>
             
             {tranparencies.map((transparency) => (
-                <div className="pt-8 shadow-2xl">
-                    <p>{transparency.id}</p>
-                    <p>{transparency.title}</p>
-                    <p>{transparency.description}</p>
-                    <p>{transparency.file_pdf}</p>
-                    
-                </div>
+                <article className="pt-8 shadow-xl grid grid-cols-2 border mb-10">
+                    <div>
+                        <div className="mb-4">
+                            <h5 className="font-semibold text-lg">{transparency.title}</h5>
+                        </div>
+                        <p>{transparency.description}</p>
+                    </div>
+                    <div>
+                        
+                        <a href={transparency.file_pdf}><img className="w-[100px] h-[100px]"  src="/imgpdf.png" alt="" /></a>
+                        
+                    </div>
+                </article>
                
                ))}
         </section>

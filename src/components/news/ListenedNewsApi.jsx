@@ -51,11 +51,12 @@ export function ListenedNewsApi() {
                 </div>
                
                ))}
-               <div className="pagination mt-8 mb-6 flex justify-center px-1">
-                    
-                       {renderPageNumbers()}
-                    
+               <div className="flex justify-center pt-10">
+                <div className="w-[200px] pagination mt-8 mb-6 flex justify-center px-1 overflow-x-auto max-w-full">   
+                     {renderPageNumbers()}   
+                </div>
                </div>
+               
            </section>
        );
    }

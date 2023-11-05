@@ -14,7 +14,7 @@ export function ListenerTheaterPlays (){
             const newData = await getTeatherPlays(page);
             console.log(newData.results)
             setTheaterplays(newData.results)
-            setTotalPages(Math.ceil(newData.count / 6)); 
+            setTotalPages(Math.ceil(newData.count / 9)); 
 
         }
         loadTheatersPlays(currentPage)
@@ -70,11 +70,11 @@ export function ListenerTheaterPlays (){
                     </article>
                 ))}
             </div>
-
-                <div className="pagination mt-8 mb-6 flex justify-center">
-                   
-                   {renderPageNumbers()}
+            <div className="flex justify-center pt-10">
+                <div className="w-[200px] pagination mt-8 mb-6 flex justify-center px-1 overflow-x-auto max-w-full">   
+                  {renderPageNumbers()}     
                 </div>
+            </div>
         </section>
     )
 

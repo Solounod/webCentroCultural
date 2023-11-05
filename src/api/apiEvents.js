@@ -62,6 +62,16 @@ export const getImgByGallery = async (title_gallery) => {
     }
 }
 
+export const getImgByGalleryPages = async (title_gallery, p) => {
+    try {
+        const response = await apiImgByGallery.get(`${title_gallery}/?p=${p}`);
+        return response.data;
+    } catch {
+        console.error("Error al obtenr el resultado: ", error);
+       throw error;
+    }
+}
+
 export const getLinksByTheaterPlays = async (id) => {
     try {
         const response = await apiLinksByTheaterPlays.get(`${id}/`);

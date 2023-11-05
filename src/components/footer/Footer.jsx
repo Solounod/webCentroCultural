@@ -4,8 +4,8 @@ export function Footer(){
 
     return (
         <footer>
-            <div className="bg-gradient-to-r from-orange-500 from-10% via-red-500 via-30% to-pink-500 to-90% md:flex md:justify-center">
-                <div className="pt-20">
+            <div className="bg-gradient-to-r from-orange-500 from-10% via-red-500 via-30% to-pink-500 to-90% md:grid md:grid-cols-2">
+                <div className="pt-20 px-10 flex justify-start">
                     <img src="/logo_espacio.png" class="h-[16rem] mr-3" alt="Logo espacio" />
                 </div>
                 <section className="p-20 flex justify-center">
@@ -21,7 +21,11 @@ export function Footer(){
                         <p className="">Correo electrónico: centroculturalelespacio@gmail.com</p>
                     </div>
                 </section>
-                <ListLinkSocial/>
+                <div className="col-span-12 pb-10">
+                    <div className="flex justify-center">
+                        <ListLinkSocial/>
+                    </div>
+                </div>
             </div>
         </footer>
     )

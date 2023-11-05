@@ -16,7 +16,7 @@ export function NewsCart({ news }) {
                 <div className="flex justify-end">
                     <p className="mb-4 text-base text-gray-600">{news.date_creation}</p>
                 </div>
-                <div className="md:h-[200px] line-clamp-6"> {/* Limita a 3 líneas */}
+                <div className="md:h-[200px] line-clamp-6"> 
                     <p className="mb-4 text-base text-gray-600">{news.head_news}</p>
                 </div>
                 <div className="md:absolute bottom-4 right-8 h-16 w-30">
