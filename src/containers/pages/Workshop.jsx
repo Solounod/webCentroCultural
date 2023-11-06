@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { LayoutFull } from "../../components/hocs/LayoutFull"
 import { ListenerWorkShop } from "../../components/workshop/LIstenerWorkShop"
 import { SendEmailContact } from "../../components/contact/SendEmailContact"
 
 export function Workshop() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);  
+    }, []);
 
     return(
         <>

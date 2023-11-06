@@ -22,9 +22,9 @@ export function ListenerTransparency(){
             
             {tranparencies.map((transparency) => (
                 <article className="pt-8 shadow-xl grid grid-cols-2 border mb-10">
-                    <div>
+                    <div className="px-4">
                         <div className="mb-4">
-                            <h5 className="font-semibold text-lg">{transparency.title}</h5>
+                            <h5 className="font-semibold text-lg ">{transparency.title}</h5>
                         </div>
                         <p>{transparency.description}</p>
                     </div>

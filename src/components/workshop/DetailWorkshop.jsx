@@ -20,7 +20,7 @@ export function DetailWorkshop(){
 
     return (
         <>
-            <section className="pt-40 pb-8 px-16 shadow-2xl gap-2" key={detailWorkshops.id}> 
+            <section className="pt-40 px-2 pb-8 md:px-16 shadow-2xl gap-2" key={detailWorkshops.id}> 
                 <article className="md:grid md:grid-cols-2">
                     <div >
                         <img  className="w-[600px]" src={detailWorkshops.image_workshop} alt="" />

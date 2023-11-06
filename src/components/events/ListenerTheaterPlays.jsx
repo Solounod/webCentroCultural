@@ -52,7 +52,8 @@ export function ListenerTheaterPlays (){
                     <article key={theaterplay.id} className=" border border-gray-300 mb-8 bg-slate-100 block rounded-lg shadow-2xl">
 
                         <div className="  relative overflow-hidden bg-cover bg-no-repeat z-0  ">
-                            <div className="image-container transform scale-100 hover:scale-110">
+                            <div className="image-container transform scale-100 hover:scale-110 hover:cursor-pointer" onClick={() => {
+                                    navigate(`/Eventos/${theaterplay.id}`)}}>
                                 <img className=" w-full rounded-t-lg h-72 " src={theaterplay.image} alt="" />
                             </div>
                         </div>

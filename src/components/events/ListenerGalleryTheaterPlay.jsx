@@ -119,7 +119,7 @@ export function ListenerGalleryTheaterPlay({ id }) {
 
               </button>
             </div>
-            <div className="absolute bottom-4 w-[800px] flex justify-center">
+            <div className="absolute bottom-4 w-[800px] flex md:justify-center sm:justify-center">
               <button className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white" 
               onClick={() => {navigate(`/Eventos/${id}/${galleryData.gallery.id}/${galleryData.gallery.title_gallery}`)}}>Galeria completa</button>
             </div>

@@ -32,7 +32,7 @@ export function DetailTheaterplay () {
         <section className="px-2 pb-8 md:px-16 shadow-2xl gap-2" key={detailTheaters.id}>
             <article className="block">
                 <div className="">
-                    <img  className="w-full md:h-[500px]" src={detailTheaters.image} alt="imagen evento"/>
+                    <img  className="w-full md:h-[500px] sm:h-[400px] h-[300px]" src={detailTheaters.image} alt="imagen evento"/>
                 </div>
                 <div>
                     <div className="flex">

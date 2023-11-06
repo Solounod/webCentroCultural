@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getWorkShop, getCategories } from "../../api/apiworkshop";
 import { useNavigate } from "react-router-dom";
-import { LayoutFull } from "../hocs/LayoutFull";
 import { ListLinkSocial } from "../contact/ListLinkSocial";
 
 
@@ -41,7 +40,7 @@ export function ListenerWorkShop() {
                 <div className="">
                     <h2 className="text-4xl font-light uppercase text-red-700 ">Talleres</h2>
                     <hr className="h-px my-4 bg-red-800 border-0" />
-                    <p className="text-center mt-20">El Centro Cultural el espacio ofrece una variada oferta cultural en formación artistica, talleres regulares y otras instancias gratuitas, para mas información puedes dirigirte al a nuestras redes sociales del centro cultural</p>
+                    <p className="text-center mt-20 text-gray-800 text-md">El Centro Cultural el espacio ofrece una variada oferta cultural en formación artistica, talleres regulares y otras instancias gratuitas, para mas información puedes dirigirte al a nuestras redes sociales del centro cultural</p>
                     <div className="flex justify-center mt-20">
                     <ListLinkSocial/>
                     </div>

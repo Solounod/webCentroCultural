@@ -38,10 +38,10 @@ export function Navbar() {
     
     <nav className={` border-gray-200 ${isNavFixed ? 'fixed  top-0 left-0 w-full px-2  transition-opacity duration-600 opacity-100' : 'relative '} bg-gradient-to-r from-orange-500 from-10% via-red-500 via-30% to-pink-500 to-90% z-10`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-        <a href="#" class="flex items-center">
+        <div  class="flex items-center hover:cursor-pointer" onClick={() => {navigate(`/Inicio`)}}>
           <img src="/logo_espacio.png" class="h-16 mr-3" alt="Logo espacio" />
 
-        </a>
+        </div>
         <button onClick={handleClick} data-collapse-toggle="navbar-dropdown" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-200 dark:text-gray-400 dark:hover:bg-red-700 dark:focus:ring-red-600" aria-controls="navbar-dropdown" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
           <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">

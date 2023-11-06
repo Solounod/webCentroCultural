@@ -11,7 +11,7 @@ export function ListLinkSocial() {
                 const linkSocialData = await getLinkSocial();
                 console.log(linkSocialData);
                 setLinks(linkSocialData)
-            } catch (error){
+            } catch (error) {
                 console.error("Error al optener datos:", error);
             }
         }
@@ -19,11 +19,11 @@ export function ListLinkSocial() {
     }, [])
 
     return (
-        <div>
+        <div className="w-full  flex justify-center">
             {links.map((link) => (
-                <div className="w-10 h-10">
+                <div className="w-10 h-10 mx-2">
                     <a href={link.url}>
-                    <img src={link.img} alt="imagen link  " />
+                        <img className="w-full h-full" src={link.img} alt="imagen link  " />
                     </a>
                 </div>
             ))}
