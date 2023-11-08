@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { LayoutFull } from "../../components/hocs/LayoutFull";
 import { DetailsNewsOne } from "../../components/news/DetailsNewsOne";
+import { SendEmailContact } from "../../components/contact/SendEmailContact";
 
 
 
@@ -16,6 +17,9 @@ export function DetailNews () {
         <>
             <LayoutFull>
                 <DetailsNewsOne/>
+                <section className="bg-slate-950 pb-1">
+                    <SendEmailContact/>
+                </section>
             </LayoutFull>
         </>
     )

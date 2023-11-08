@@ -4,5 +4,9 @@ from .models import News
 
 
 
+class NewAdmin(admin.ModelAdmin):
+    list_display = ['title', 'slug', 'date_creation', 'link_news',]
+    search_fields = ['title', 'date_creation',]
 
-admin.site.register(News)
+
+admin.site.register(News, NewAdmin)

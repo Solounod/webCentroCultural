@@ -2,4 +2,8 @@ from django.contrib import admin
 from .models import Transparency
 
 # Register your models here.
-admin.site.register(Transparency)
+
+class TransparencyAdmin(admin.ModelAdmin):
+    list_display = ["title", "link", "file_pdf",]
+
+admin.site.register(Transparency, TransparencyAdmin)

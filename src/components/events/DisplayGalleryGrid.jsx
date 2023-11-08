@@ -56,13 +56,13 @@ const renderPageNumbers = () => {
       <div className="pt-30 mb-12">
         <h5 className="mt-30 p-4 w-full bg-indigo-900 text-3xl text-start text-white">Galeria</h5>
       </div>
-      <div className="grid md:grid-cols-3 md:gap-4">
+      <div className="grid md:grid-cols-3 md:gap-4 sm:grid-cols-2">
         {images.map((image) => (
           <div key={image.id} className="">
             <div
               onClick={() => toggleImageExpand(image.id)}
               className={`${
-                expandedImageId === image.id ? "h-[300px] md:w-[1200px] md:h-[600px] md:z-10 md:absolute  md:inset-0 md:hover:cursor-pointer" : "w-full md:w-[360px] h-[300px] image-cover transform scale-100 md:hover:scale-110 hover:cursor-pointer "
+                expandedImageId === image.id ? "h-[300px] md:w-[1200px] md:h-[600px] md:z-10 md:absolute  md:inset-0 md:hover:cursor-pointer" : "flex w-full sm:px-1 md:w-[300px] h-[300px] image-cover transform scale-100 md:hover:scale-110 hover:cursor-pointer "
               }   `}
             >
               <img

@@ -22,13 +22,13 @@ export function DetailsNewsOne (){
         <section className="px-2 pb-8 md:px-16 shadow-2xl gap-2" key={detailsNews.id}> 
         <article className="block">
             <div >
-                <img  className="w-full md:h-[500px]" src={detailsNews.image_news} alt="" />
+                <img  className="w-full h-[350px] sm:h-[400px] md:h-[500px] tracking-in-expand-fwd" src={detailsNews.image_news} alt="" />
             </div>
             <div>
                 <div className="flex ">
-                    <h5 className="p-4 w-full bg-indigo-900 text-3xl text-start text-white">{detailsNews.title}</h5>
+                    <h5 className="p-4 w-full bg-indigo-900 text-3xl text-start text-white scale-up-hor-right">{detailsNews.title}</h5>
                 </div>
-                <div className="flex justify-start">
+                <div className="flex justify-start scale-up-hor-right">
                     <div className="md:grid md:grid-cols-2  w-60">
                         <div className="bg-red-600 p-1 text-white">
                             <p>Ver mas</p>

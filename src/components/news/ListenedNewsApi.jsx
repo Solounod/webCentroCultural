@@ -38,7 +38,7 @@ export function ListenedNewsApi() {
     };
 
     return (
-        <section className="mt-4 md:px-12 px-2">
+        <section className="mt-4 sm:px-16 md:px-16 px-2">
             <div className="">
              <h2 className="text-4xl font-light uppercase text-red-700 ">Noticias</h2>
              <hr className="h-px my-4 bg-red-800 border-0" />

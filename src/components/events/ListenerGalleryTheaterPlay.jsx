@@ -85,7 +85,7 @@ export function ListenerGalleryTheaterPlay({ id }) {
           </div>
         <div className="flex justify-center" key={galleryData.gallery.id}>
           
-          <div className="flex overflow-x-scroll relative w-[800px]" >
+          <div className="flex  relative w-[800px]" >
             <div className="flex  w-full">
               {galleryData.images.map((img, imageIndex) => (
                 <div
@@ -119,7 +119,7 @@ export function ListenerGalleryTheaterPlay({ id }) {
 
               </button>
             </div>
-            <div className="absolute bottom-4 w-[800px] flex md:justify-center sm:justify-center">
+            <div className="absolute bottom-4 md:w-[800px] flex md:justify-center sm:justify-center justify-center w-[500px]">
               <button className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white" 
               onClick={() => {navigate(`/Eventos/${id}/${galleryData.gallery.id}/${galleryData.gallery.title_gallery}`)}}>Galeria completa</button>
             </div>

@@ -50,7 +50,7 @@ export function ListenerWorkShop() {
                         <div className="mt-20 bg-indigo-800 h-20  rounded-full text-center  text-white text-2xl">
                             <h5 className="p-5">{categoryWorkshops.category.category_workshop}</h5>
                         </div>
-                        <div className="pt-8 md:grid md:grid-cols-4 md:gap-3">
+                        <div className="pt-8 sm:grid sm:grid-cols-2 sm:gap-2 md:grid md:grid-cols-4 md:gap-3">
                         {categoryWorkshops.workshops.map((workshop) => (
                             <article className="mb-8 border border-gray-300 bg-slate-100 block rounded-lg shadow-2xl md:w-76 " key={workshop.id}>
                                 

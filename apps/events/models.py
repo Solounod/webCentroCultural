@@ -6,6 +6,7 @@ class TheaterPlays(models.Model):
     class Meta:
         verbose_name = 'Obra'
         verbose_name_plural = 'Obras'
+        ordering = ["-datetime_creation"]
 
     title = models.CharField(max_length=200, unique=True, verbose_name='Titulo Obra')
     image = models.ImageField(upload_to='media/obra/', verbose_name='Imagen')
@@ -16,12 +17,13 @@ class TheaterPlays(models.Model):
 
     def __str__(self):
         return f"{self.id}-{self.title}"
-
+    
 
 class GalleryTheaterPlays(models.Model):
     class Meta:
         verbose_name = 'Galeria'
         verbose_name_plural = 'Galerias'
+        ordering = ["-datetime_creation"]
 
     title_gallery = models.CharField(max_length=200, unique=True ,verbose_name='Titulo galeria')
     theaterplays = models.ForeignKey(TheaterPlays, on_delete=models.CASCADE)
@@ -37,6 +39,7 @@ class ImgGallery(models.Model):
     class Meta:
         verbose_name = 'Imagen galeria'
         verbose_name_plural = 'Imagenes galerias'
+        ordering = ["-datetime_creation"]
 
     gallery = models.ForeignKey(GalleryTheaterPlays, on_delete=models.CASCADE)
     image_only = models.ImageField(upload_to='media/galeria/', verbose_name='Imagen')
@@ -51,6 +54,7 @@ class LinksTheaterPlays(models.Model):
     class Meta:
         verbose_name = 'Link'
         verbose_name_plural = 'Links'
+        ordering = ["-datetime_creation"]
 
     title_link = models.CharField(max_length=200, unique=True, verbose_name='Titulo link')
     name_theaterplays = models.ForeignKey(TheaterPlays, on_delete=models.CASCADE)

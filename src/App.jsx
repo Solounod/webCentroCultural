@@ -16,6 +16,7 @@ function App() {
     <main className="bg-white"> 
     <BrowserRouter>
       <Routes>
+        <Route path="" element={<Inicio />} />
         <Route path="/Inicio" element={<Inicio />} />
         <Route path="/Noticia/:slug" element={<DetailNews />} />
         <Route path="/Talleres" element={<Workshop />} />
