@@ -5,8 +5,8 @@ export function Footer(){
     return (
         <footer>
             <div className="bg-gradient-to-r from-orange-500 from-10% via-red-500 via-30% to-pink-500 to-90% md:grid md:grid-cols-3">
-                <div className="pt-16 px-10 flex justify-center">
-                    <img src="/logo_espacio.png" class="h-[16rem]" alt="Logo espacio" />
+                <div className="pt-10 px-10 flex justify-center">
+                    <img src="/logo_espacio.png" class="h-[16rem] " alt="Logo espacio" />
                 </div>
                 <section className="p-20 sm:p-10 md:pr-10 md:pt-20 block md:flex md:justify-between">
                     <div className=" md:mx-10 text-white  ">

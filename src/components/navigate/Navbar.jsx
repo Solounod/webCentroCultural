@@ -39,7 +39,7 @@ export function Navbar() {
     <nav className={` border-gray-200 ${isNavFixed ? 'fixed  top-0 left-0 w-full px-2  transition-opacity duration-600 opacity-100' : 'relative '} bg-gradient-to-r from-orange-500 from-10% via-red-500 via-30% to-pink-500 to-90% z-10`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
         <div  class="flex items-center hover:cursor-pointer" onClick={() => {navigate(`/Inicio`)}}>
-          <img src="/logo_espacio.png" class="h-16 mr-3" alt="Logo espacio" />
+          <img src="/logo_espacio.png" class="h-[36px] sm:h-[50px] md:h-[58px] mr-3" alt="Logo espacio" />
 
         </div>
         <button onClick={handleClick} data-collapse-toggle="navbar-dropdown" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-200 dark:text-gray-400 dark:hover:bg-red-700 dark:focus:ring-red-600" aria-controls="navbar-dropdown" aria-expanded="false">
@@ -49,22 +49,25 @@ export function Navbar() {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" >
-          <ul className="flex flex-col font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-transparent">
+          <ul className="flex justify-evenly p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-transparent text-lg">
             <li onClick={() => {navigate(`/Inicio`)}}>
-              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:p-0 " aria-current="page">Inicio</a>
+              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold md:hover:text-purple-400 md:p-0 " aria-current="page">Inicio</a>
             </li>
 
             <li onClick={() => {navigate(`/Talleres`)}}>
-              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:p-0 ">Talleres</a>
+              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:hover:text-purple-400 md:p-0 ">Talleres</a>
             </li>
             <li onClick={() => {navigate(`/Eventos`)}}>
-              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold md:p-0 ">Eventos</a>
+              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:hover:text-purple-400 md:p-0 ">Eventos</a>
+            </li>
+            <li onClick={() => {navigate(`/Hitos`)}}>
+              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:hover:text-purple-400 md:p-0 ">Hitos</a>
             </li>
             <li onClick={() => {navigate(`/Contacto`)}}>
-              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold   md:p-0 ">Contactanos</a>
+              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:hover:text-purple-400  md:p-0 ">Contactanos</a>
             </li>
             <li onClick={() => {navigate(`/Transparencias`)}}>
-              <a href="#" className="block py-2 pl-3 pr-4 text-white  md:hover:bg-transparent md:border-0 md:hover:font-extrabold   md:p-0 ">Transparencia</a>
+              <a href="#" className="block py-2 pl-3 pr-4 text-white  md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:hover:text-purple-400  md:p-0 ">Transparencia</a>
             </li>
           </ul>
         </div>

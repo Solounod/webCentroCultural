@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { toast } from "react-hot-toast";
 import { postEmailContact } from "../../api/apiContact";
 import { Maps } from "./Maps";
 
@@ -29,7 +29,16 @@ export function SendEmailContact() {
 
         const handleSubmit = async (formData) => {
             console.log(formData)
-            await postEmailContact(formData)
+            await postEmailContact(formData);
+
+            toast.success("Enviado con exito, en breve nos comunicaremos con usted.", {
+                position: "bottom-center",
+                duration:5000,
+                style: {
+                  background: "#101010",
+                  color: "#fff",
+    
+            }})
 
             setFormData({
                 subject: "",
@@ -39,7 +48,8 @@ export function SendEmailContact() {
 
         }
 
-        handleSubmit(formData)
+        handleSubmit(formData)   
+        
     }
  
     return (
@@ -87,6 +97,5 @@ export function SendEmailContact() {
             </div>
         </section>
     )
-
 
 }

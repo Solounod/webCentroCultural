@@ -8,7 +8,8 @@ import { PageDetailWorkshop } from "./containers/pages/PageDetailWorkshop";
 import { DetailNews } from "./containers/pages/DetailNews";
 import { DetailEvents } from "./containers/pages/DetailEvents";
 import { DetailGalleryGrid } from "./containers/pages/DetailGalleryGrid";
-
+import { Toaster } from "react-hot-toast";
+import { Milestones } from "./containers/pages/Milestones";
 
 function App() {
 
@@ -25,8 +26,10 @@ function App() {
         <Route path="/Eventos" element={<Events/>}/>
         <Route path="/Eventos/:id" element={<DetailEvents/>} />
         <Route path="/Eventos/:id/:id/:title_gallery" element={<DetailGalleryGrid/>} />
+        <Route path="/Hitos" element={<Milestones/>}/>
         <Route path="/Contacto" element={<Contact/>} />
       </Routes>
+      <Toaster/>
     </BrowserRouter>
     </main>
   )

@@ -52,6 +52,7 @@ PROJECT_APPS = [
     "apps.events",
     "apps.transparency",
     "apps.contact",
+    "apps.hitos",
 ]
 
 THIRD_PARTY_APPS = [

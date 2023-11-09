@@ -55,10 +55,10 @@ export function ListenerWorkShop() {
                             <article className="mb-8 border border-gray-300 bg-slate-100 block rounded-lg shadow-2xl md:w-76 " key={workshop.id}>
                                 
                                 <div className="  relative overflow-hidden bg-cover bg-no-repeat z-0  " >
-                                    <div className="image-container transform scale-100 hover:scale-110 " onClick={() => {
+                                    <div className="image-container transition duration-300 ease-in-out transform scale-100 hover:scale-110 " onClick={() => {
                                             navigate(`/Talleres/${categoryWorkshops.category.id}/${workshop.slug}`)}}>
                                         
-                                        <img className="w-full rounded-t-lg h-72 hover:cursor-pointer" src={workshop.image_workshop} />
+                                        <img className="w-full rounded-t-lg h-64 hover:cursor-pointer" src={workshop.image_workshop} />
                                     </div>
                                 </div>
                                 <div className="block relative font-sans p-3 overflow-hidden md:h-72">

@@ -23,7 +23,7 @@ export function DetailWorkshop(){
             <section className="pt-40 px-2 pb-8 md:px-16 shadow-2xl gap-2" key={detailWorkshops.id}> 
                 <article className="sm:block md:grid md:grid-cols-2">
                     <div >
-                        <img  className="h-[400px] w-full md:w-[600px] md:h-[800px] tracking-in-expand-fwd" src={detailWorkshops.image_workshop} alt="" />
+                        <img  className="h-[400px] w-full md:w-[400px] md:h-[400px] tracking-in-expand-fwd" src={detailWorkshops.image_workshop} alt="" />
                     </div>
                     <div>
                         <div className="flex scale-up-hor-right">

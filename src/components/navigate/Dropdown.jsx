@@ -19,6 +19,9 @@ export function Dropdown({ menuClicked }) {
               <li className="block px-4 py-2 text-base hover:text-lg hover:font-semibold hover:cursor-pointer"  onClick={() => {navigate(`/Eventos`)}}>
                 Eventos
               </li>
+              <li className="block px-4 py-2 text-base hover:text-lg hover:font-semibold hover:cursor-pointer"  onClick={() => {navigate(`/Hitos`)}}>
+                Hitos
+              </li>
               <li className="block px-4 py-2 text-base hover:text-lg hover:font-semibold hover:cursor-pointer"  onClick={() => {navigate(`/Contacto`)}}>
                 Contactanos
               </li>
