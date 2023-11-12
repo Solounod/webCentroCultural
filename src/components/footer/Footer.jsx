@@ -15,9 +15,9 @@ export function Footer(){
                         <p className="pt-2 text-sm">3 oriente 7 y 8 norte 1874, Talca, Chile.</p>
                     </div>
                     <div className="text-white  mt-4 md:mt-0">
-                        <h5 className="font-semibold uppercase text-sm">Contactanos</h5> 
+                        <h5 className="font-semibold uppercase text-sm">Contáctanos</h5> 
                         <hr />           
-                        <p className="pt-2 text-sm">Teléfono: 990564487</p>
+                        <p className="pt-2 text-sm">Teléfono: +56 9 90564487</p>
                         <p className="text-sm">Correo electrónico: centroculturalelespacio@gmail.com</p>
                     </div>
                 </section>

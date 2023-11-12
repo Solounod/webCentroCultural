@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 const apiWorkShop = axios.create({
-    baseURL: "http://localhost:8000/api/workshop/workshops/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/workshop/workshops/`
 
 })
 
 const apiCategories = axios.create({
-    baseURL: "http://localhost:8000/api/workshop/categories/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/workshop/categories/`
 
 })
 

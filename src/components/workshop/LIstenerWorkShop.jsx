@@ -64,7 +64,7 @@ export function ListenerWorkShop() {
                                 <div className="block relative font-sans p-3 overflow-hidden md:h-72">
                                     <h5 className="mb-2 text-lg font-medium leading-tight text-gray-800 ">{workshop.tittle}</h5>
                                     
-                                    <a className="" href={workshop.facilitator_link}><p className="text-sm bg-orange-200 text-gray-800 text-center rounded-lg p-1 hover:bg-red-500 hover:text-white hover:font-semibold hover:cursor-pointer">Facilitador: {workshop.facilitator_name}</p></a> 
+                                    <a className="" href={workshop.facilitator_link} target="_blank"><p className="text-sm bg-orange-200 text-gray-800 text-center rounded-lg p-1 hover:bg-red-500 hover:text-white hover:font-semibold hover:cursor-pointer">Facilitador: {workshop.facilitator_name}</p></a> 
                                     <p className="text-gray-800 font-medium">Horarios:</p>
                                     <p className="text-sm text-gray-800 ">{workshop.schedules}</p>
                                     <p className="text-gray-800 ">Precios:</p>

@@ -10,6 +10,9 @@ import { DetailEvents } from "./containers/pages/DetailEvents";
 import { DetailGalleryGrid } from "./containers/pages/DetailGalleryGrid";
 import { Toaster } from "react-hot-toast";
 import { Milestones } from "./containers/pages/Milestones";
+import { DetailMilestone } from "./containers/pages/DetailMilestone";
+import { DetailGalleryGridMilestones } from "./containers/pages/DetailGalleryGridMilestones";
+
 
 function App() {
 
@@ -27,6 +30,8 @@ function App() {
         <Route path="/Eventos/:id" element={<DetailEvents/>} />
         <Route path="/Eventos/:id/:id/:title_gallery" element={<DetailGalleryGrid/>} />
         <Route path="/Hitos" element={<Milestones/>}/>
+        <Route path="/Hitos/:id" element={<DetailMilestone/>} />
+        <Route path="/Hitos/:id/:id/:title_gallery" element={<DetailGalleryGridMilestones/>} />
         <Route path="/Contacto" element={<Contact/>} />
       </Routes>
       <Toaster/>

@@ -20,14 +20,14 @@ export function DetailWorkshop(){
 
     return (
         <>
-            <section className="pt-40 px-2 pb-8 md:px-16 shadow-2xl gap-2" key={detailWorkshops.id}> 
+            <section className="pt-40 px-2 pb-8 sm:px-16 md:px-16 shadow-2xl gap-2" key={detailWorkshops.id}> 
                 <article className="sm:block md:grid md:grid-cols-2">
                     <div >
                         <img  className="h-[400px] w-full md:w-[400px] md:h-[400px] tracking-in-expand-fwd" src={detailWorkshops.image_workshop} alt="" />
                     </div>
                     <div>
                         <div className="flex scale-up-hor-right">
-                            <h5 className="p-4 w-full bg-indigo-900 text-3xl text-right text-white ">{detailWorkshops.tittle}</h5>
+                            <h5 className="p-4 w-full bg-indigo-900 text-3xl text-right text-white flex scale-up-hor-right">{detailWorkshops.tittle}</h5>
                         </div>
                         <div className="flex justify-end ">
                             <div className="md:grid md:grid-cols-2  w-60">

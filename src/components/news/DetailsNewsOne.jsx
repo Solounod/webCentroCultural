@@ -34,7 +34,7 @@ export function DetailsNewsOne (){
                             <p>Ver mas</p>
                         </div>
                         <div className="border border-red-600 p-1  hover:bg-red-200">
-                            <button className="text-red-600 font-semibold"><a href={detailsNews.link_news}>Link</a></button>
+                            <button className="text-red-600 font-semibold"><a href={detailsNews.link_news} target="_blank">Link</a></button>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ export function DetailsNewsOne (){
         <div className=" mx-2  mb-20  flex justify-center">
             
                 {detailsNews.video_news && (
-                <div className="hover:w-[600]">
+                <div className="w-[550px] h-[500px] hover:w-[600px]">
                     <video controls className="h-auto w-full rounded-md hover:cursor-pointer ">
                         <source src={detailsNews.video_news} type="video/mp4" />
                         Your browser does not support the video tag.

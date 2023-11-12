@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiTransparency = axios.create({
-    baseURL: "http://localhost:8000/api/transparencias-proyectos/transparencia/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/transparencias-proyectos/transparencia/`
 
 })
 

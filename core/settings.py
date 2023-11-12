@@ -32,7 +32,17 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1"
+]
+
+if not DEBUG:
+    ALLOWED_HOSTS = [
+        "centroculturalelespacio.com",
+        ".centroculturalelespacio.com",
+        "www.centroculturalelespacio.com"
+    ]
 
 
 # Application definition
@@ -132,7 +142,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es"
 
 TIME_ZONE = "UTC"
 
@@ -169,8 +179,8 @@ REST_FRAMEWORK = {
 }
 
 
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER ="webcentroculturalelespacio@gmail.com"
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS_USER')
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')

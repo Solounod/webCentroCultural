@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { getDetailMilestones } from "../../api/apiMilestones";
 import { useParams } from "react-router-dom";
 import { ListenerGalleryMilestone } from "./ListenerGalleryMilestone";
-import { ListenerLinkMilestone } from "./ListenerGalleryMilestone";
+import { ListenerLinkMilestone } from "./ListenerLinkMilestone";
 
-export function DetailTheaterplay () {
+export function DetailComponentMilestone () {
     const [detailMilestones, setDetailMilestones] = useState([]);
     const [menuClicked, setMenuClicked] = useState(false);
     const params = useParams()
@@ -57,7 +57,7 @@ export function DetailTheaterplay () {
                     <p className=" text-slate-800 text-md pb-16">{detailMilestones.description}</p>
                 </div>
             </article>           
-            <ListenerGalleryTheaterPlay key={params.id} id={params.id}/>
+            <ListenerGalleryMilestone key={params.id} id={params.id}/>
         </section>
     )
 }

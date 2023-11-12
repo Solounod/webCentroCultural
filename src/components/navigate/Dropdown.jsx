@@ -23,7 +23,7 @@ export function Dropdown({ menuClicked }) {
                 Hitos
               </li>
               <li className="block px-4 py-2 text-base hover:text-lg hover:font-semibold hover:cursor-pointer"  onClick={() => {navigate(`/Contacto`)}}>
-                Contactanos
+                Contáctanos
               </li>
               <li className="block px-4 py-2 text-base hover:text-lg hover:font-semibold hover:cursor-pointer" onClick={() => {navigate(`/Transparencias`)}}>
                 Transparencia

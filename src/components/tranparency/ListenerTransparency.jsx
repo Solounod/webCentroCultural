@@ -29,14 +29,14 @@ export function ListenerTransparency(){
                         <p>{transparency.description}</p>
                     </div>
                     <div className="flex justify-center pt-12">
-                        <a href={transparency.link}><button className="p-2 text-orange-600 border-2  border-orange-600 rounded-full hover:bg-orange-600 hover:text-white hover:font-semibold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">Ir a documento web</button></a>
+                        <a href={transparency.link} target="_blank"><button className="p-2 text-orange-600 border-2  border-orange-600 rounded-full hover:bg-orange-600 hover:text-white hover:font-semibold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">Ir a documento web</button></a>
                     </div>
                     <div className="block">
                         <div className="flex justify-center md:pb-6 pb-2 pt-8">
                             <p className="font-semibold">Ver documento aquí</p>
                         </div>
                         <div className="p-6 flex justify-center animate-bounce">
-                            <a href={transparency.file_pdf}><img className="md:w-[100px] md:h-[100px] w-[80px] h-[80px]"  src="/imgpdf.png" alt="" /></a>
+                            <a href={transparency.file_pdf} target="_blank"><img className="md:w-[100px] md:h-[100px] w-[80px] h-[80px]"  src="/imgpdf.png" alt="" /></a>
                         </div>
                     </div>
                 </article>

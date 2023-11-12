@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 export const apiEmailContact = axios.create({
-    baseURL: "http://localhost:8000/api/contact/send-email/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/contact/send-email/`
 })
 
 
 export const apiLinkSocial = axios.create({
-    baseURL: "http://localhost:8000/api/contact/link-social/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/contact/link-social/`
 }) 
 
 export const postEmailContact =  (data) => apiEmailContact.post("/", data, {

@@ -1,22 +1,22 @@
 import axios from 'axios';
 
 export const apiMilestones = axios.create({
-    baseURL: "http://localhost:8000/api/hitos/milestones/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/hitos/milestones/`
 
 })
 
 export const apiGalleryMilestones = axios.create({
-    baseURL: "http://localhost:8000/api/hitos/milestones/gallery/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/hitos/milestones/gallery/`
 
 })
 
 export const apiImgByGalleryMilestones = axios.create({
-    baseURL: "http://localhost:8000/api/hitos/milestones/img-gallery/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/hitos/milestones/img-gallery/`
 
 })
 
 export const apiLinksByMilestones = axios.create({
-    baseURL: "http://localhost:8000/api/hitos/milestones/links/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/hitos/milestones/links/`
 })
 
 

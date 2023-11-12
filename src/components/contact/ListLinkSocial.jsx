@@ -22,7 +22,7 @@ export function ListLinkSocial() {
         <div className="w-full  flex justify-center">
             {links.map((link) => (
                 <div className="w-8 h-8 mx-2">
-                    <a href={link.url}>
+                    <a href={link.url} target="_blank">
                         <img className="w-full h-full" src={link.img} alt="imagen link  " />
                     </a>
                 </div>

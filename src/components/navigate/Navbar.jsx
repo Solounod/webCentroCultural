@@ -64,7 +64,7 @@ export function Navbar() {
               <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:hover:text-purple-400 md:p-0 ">Hitos</a>
             </li>
             <li onClick={() => {navigate(`/Contacto`)}}>
-              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:hover:text-purple-400  md:p-0 ">Contactanos</a>
+              <a href="#" className="block py-2 pl-3 pr-4 text-white md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:hover:text-purple-400  md:p-0 ">Contáctanos</a>
             </li>
             <li onClick={() => {navigate(`/Transparencias`)}}>
               <a href="#" className="block py-2 pl-3 pr-4 text-white  md:hover:bg-transparent md:border-0 md:hover:font-extrabold  md:hover:text-purple-400  md:p-0 ">Transparencia</a>

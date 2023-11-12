@@ -1,22 +1,22 @@
 import axios from 'axios';
 
 export const apiTheaterPlays = axios.create({
-    baseURL: "http://localhost:8000/api/events/theaterplays/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/events/theaterplays/`
 
 })
 
 export const apiGallery = axios.create({
-    baseURL: "http://localhost:8000/api/events/theaterplays/gallery/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/events/theaterplays/gallery/`
 
 })
 
 export const apiImgByGallery = axios.create({
-    baseURL: "http://localhost:8000/api/events/theaterplays/img-gallery/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/events/theaterplays/img-gallery/`
 
 })
 
 export const apiLinksByTheaterPlays = axios.create({
-    baseURL: "http://localhost:8000/api/events/theaterplays/links/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/events/theaterplays/links/`
 })
 
 

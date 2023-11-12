@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiNews = axios.create({
-    baseURL: "http://localhost:8000/api/news/"
+    baseURL: `${import.meta.env.VITE_BACKEND_URL}api/news/`
 });
 
 /*export const getNews = () => apiNews.get("/")*/

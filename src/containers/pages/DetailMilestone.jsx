@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { LayoutFull } from "../../components/hocs/LayoutFull";
-import { DetailTheaterplay } from "../../components/events/DetailTheaterplay";
 import { SendEmailContact } from "../../components/contact/SendEmailContact";
+import { DetailComponentMilestone } from "../../components/milestones/DetailComponentMilestone";
 
-export function DetailEvents() {
+
+export function DetailMilestone() {
 
     useEffect(() => {
         window.scrollTo(0, 0); 
@@ -12,7 +13,7 @@ export function DetailEvents() {
     return (
         <>
             <LayoutFull>
-                <DetailTheaterplay />
+                <DetailComponentMilestone />
                 <section className="bg-slate-950 pb-1">
                     <SendEmailContact/>
                 </section>
