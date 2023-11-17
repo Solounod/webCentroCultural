@@ -132,14 +132,12 @@ DATABASES = {
 
 #cors-headers server settings
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:5173',
-    'http://localhost:8000',
+    
     'https://centroculturalelespacio.onrender.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:5173',    
-    'http://localhost:8000',
+    
     'https://centroculturalelespacio.onrender.com',
 ]
 
