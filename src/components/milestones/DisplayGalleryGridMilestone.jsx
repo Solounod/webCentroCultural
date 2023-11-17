@@ -13,7 +13,6 @@ export function DisplayGalleryGridMilestone() {
     async function loadDisplayGallery(page) {
       if (params.id && params.title_gallery) {
         const dataDisplayGallery = await getImgByGalleryPagesMilestone(params.title_gallery, page);
-        console.log(dataDisplayGallery.results)
         setImages(dataDisplayGallery.results);
         setTotalPages(Math.ceil(dataDisplayGallery.count / 9));
       }

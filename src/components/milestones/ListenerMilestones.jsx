@@ -12,7 +12,6 @@ export function ListenerMilestones (){
     useEffect (() => {
         async function loadMilestones(page) {
             const newData = await getMilestones(page);
-            console.log(newData.results)
             setMilestones(newData.results)
             setTotalPages(Math.ceil(newData.count / 9)); 
 

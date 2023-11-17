@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export function Dropdown({ menuClicked }) {
   const navigate = useNavigate()
 
-  console.log(menuClicked)
+  
     return (
 
                     

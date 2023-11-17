@@ -7,7 +7,6 @@ export function ListenerTransparency(){
     useEffect (() => {
         async function loadTransparency() {
             const transparencyData = await getTransparency();
-            console.log(transparencyData)
             setTranpariencies(transparencyData)
         }
         loadTransparency()
@@ -21,7 +20,7 @@ export function ListenerTransparency(){
             </div>
             
             {tranparencies.map((transparency) => (
-                <article className="pt-8 md:pb-6 shadow-md shadow-slate-400 sm:block md:grid md:grid-cols-3 border border-slate-700 rounded-lg mb-10 ">
+                <article className="pt-8 md:pb-6 shadow-md shadow-slate-400 sm:block md:grid md:grid-cols-3 border border-slate-700 rounded-lg mb-10 " key={transparency.id}>
                     <div className="px-4">
                         <div className="mb-4">
                             <h5 className="font-semibold text-lg ">{transparency.title}</h5>

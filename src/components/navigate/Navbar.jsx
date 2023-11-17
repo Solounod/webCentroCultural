@@ -17,14 +17,14 @@ export function Navbar() {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
     if (currentScrollY > prevScrollY) {
-      setIsNavFixed(false); // Desaparece al hacer scroll hacia abajo
+      setIsNavFixed(false); // Disappears when scrolling down
     } else {
-      setIsNavFixed(true); // Aparece al hacer scroll hacia arriba
+      setIsNavFixed(true); // Appears when scrolling up
     }
     prevScrollY = currentScrollY;
   };
   
-  let prevScrollY = 0; // Agregar esta variable para rastrear el scroll previo
+  let prevScrollY = 0; // Add this variable to track previous scroll
   
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -38,8 +38,8 @@ export function Navbar() {
     
     <nav className={` border-gray-200 ${isNavFixed ? 'fixed  top-0 left-0 w-full px-2  transition-opacity duration-600 opacity-100' : 'relative '} bg-gradient-to-r from-orange-500 from-10% via-red-500 via-30% to-pink-500 to-90% z-10`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-        <div  class="flex items-center hover:cursor-pointer" onClick={() => {navigate(`/Inicio`)}}>
-          <img src="/logo_espacio.png" class="h-[36px] sm:h-[50px] md:h-[58px] mr-3" alt="Logo espacio" />
+        <div  className="flex items-center hover:cursor-pointer" onClick={() => {navigate(`/Inicio`)}}>
+          <img src="/logo_espacio.png" className="h-[36px] sm:h-[50px] md:h-[58px] mr-3" alt="Logo espacio" />
 
         </div>
         <button onClick={handleClick} data-collapse-toggle="navbar-dropdown" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-200 dark:text-gray-400 dark:hover:bg-red-700 dark:focus:ring-red-600" aria-controls="navbar-dropdown" aria-expanded="false">

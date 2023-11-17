@@ -19,7 +19,6 @@ export function DetailTheaterplay () {
         async function loadDetailTheaterplay() {
             if (params.id) {
                 const dataDetailsTheaterPlay = await getDetailTeatherPlay(params.id)
-                console.log([dataDetailsTheaterPlay])
                 setDetailTheaters(dataDetailsTheaterPlay)
             }
             

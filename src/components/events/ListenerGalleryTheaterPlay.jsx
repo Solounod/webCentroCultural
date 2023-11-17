@@ -79,7 +79,7 @@ export function ListenerGalleryTheaterPlay({ id }) {
   return (
     <div>
       {galleryImages.map((galleryData, galleryIndex) => (
-        <div>
+        <div key={galleryData.gallery.id}>
           <div className="flex justify-center p-4 bg-indigo-500 rounded-2xl mb-8 mt-8">
             <h5 className="text-white font-semibold text-[24px]">{galleryData.gallery.title_gallery}</h5>
           </div>

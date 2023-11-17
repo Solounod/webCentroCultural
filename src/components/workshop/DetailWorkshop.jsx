@@ -11,7 +11,6 @@ export function DetailWorkshop(){
         async function loadDetailWorkshop(){
             if (params.id && params.slug){
                 const dataDetailsWorkshop = await getCategoriesDetailWorkshop(params.id, params.slug)
-                console.log(dataDetailsWorkshop)
                 setDetaiWorkshop(dataDetailsWorkshop)
             }
         }

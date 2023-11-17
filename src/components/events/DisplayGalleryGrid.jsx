@@ -13,7 +13,6 @@ export function DisplayGalleryGrid() {
     async function loadDisplayGallery(page) {
       if (params.id && params.title_gallery) {
         const dataDisplayGallery = await getImgByGalleryPages(params.title_gallery, page);
-        console.log(dataDisplayGallery.results)
         setImages(dataDisplayGallery.results);
         setTotalPages(Math.ceil(dataDisplayGallery.count / 9));
       }
