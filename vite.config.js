@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'build', // Cambia 'build' por la carpeta que tu servicio de alojamiento específico requiere.
+    outDir: 'build', 
     base: '/static/', 
   },
 })

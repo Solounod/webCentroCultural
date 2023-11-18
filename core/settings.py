@@ -132,12 +132,12 @@ DATABASES = {
 
 #cors-headers server settings
 CORS_ORIGIN_WHITELIST = [
-    
+    '120.0.0.1',
     'https://centroculturalelespacio.onrender.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    
+    '120.0.0.1',
     'https://centroculturalelespacio.onrender.com',
 ]
 
