@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'build', // Cambia 'build' por la carpeta que tu servicio de alojamiento específico requiere.
+    base: '/static/', 
   },
 })
