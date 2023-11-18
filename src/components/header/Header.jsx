@@ -4,7 +4,7 @@ export function Header(){
     return (
         <header className="max-w-full px-2">
             <div className="max-w-full h-[300px] sm:h-[400px] md:h-1/4 scale-up-center">
-                <img src="/Facebook Portada.png" alt="imagen el espacio" className="w-full h-full"/>
+                <img src="../../public/Facebook Portada.png" alt="imagen el espacio" className="w-full h-full"/>
             </div>
             <div className="text-center pl-16 pr-16 mb-12 ">
                 <div className="text-[40px] md:text-[50px] font-extrabold mt-6 tracking-in-expand-fwd">
