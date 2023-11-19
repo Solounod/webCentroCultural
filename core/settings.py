@@ -133,40 +133,38 @@ DATABASES = {
 #}
 
 #cors-headers server settings
-CORS_ORIGIN_WHITELIST = [
+#    'https://centroculturalelespacio.onrender.com',
+#]
+
+#CORS_ALLOWED_ORIGINS = [
+#    'https://centroculturalelespacio.onrender.com',
+#    "http://localhost:8080",
+#    "http://127.0.0.1:9000",
+#]
+
+#CORS_ALLOW_METHODS = (
+#    "DELETE",
+#    "GET",
+#    "OPTIONS",
+#    "PATCH",
+#    "POST",
+#    "PUT",
+#)
+
+#CORS_ALLOW_HEADERS = (
+#    "accept",
+#    "authorization",
+#    "content-type",
+#    "user-agent",
+#    "x-csrftoken",
+#    "x-requested-with",
+#)
+
+
+#CSRF_TRUSTED_ORIGINS = [
     
-    'https://centroculturalelespacio.onrender.com',
-]
-
-CORS_ALLOWED_ORIGINS = [
-    'https://centroculturalelespacio.onrender.com',
-    "http://localhost:8080",
-    "http://127.0.0.1:9000",
-]
-
-CORS_ALLOW_METHODS = (
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-)
-
-CORS_ALLOW_HEADERS = (
-    "accept",
-    "authorization",
-    "content-type",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
-)
-
-
-CSRF_TRUSTED_ORIGINS = [
-    
-    'https://centroculturalelespacio.onrender.com',
-]
+#    'https://centroculturalelespacio.onrender.com',
+#]
 
 
 # Password validation
