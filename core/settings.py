@@ -138,6 +138,14 @@ CORS_ORIGIN_WHITELIST = [
     'https://centroculturalelespacio.onrender.com',
 ]
 
+CORS_ALLOW_HEADERS = [
+    'access-control-allow-headers',
+    'access-control-allow-methods',
+    'access-control-allow-origin',
+    'authorization',
+    'content-type',
+]
+
 CSRF_TRUSTED_ORIGINS = [
     
     'https://centroculturalelespacio.onrender.com',
