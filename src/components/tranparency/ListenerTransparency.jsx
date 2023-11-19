@@ -35,7 +35,7 @@ export function ListenerTransparency(){
                             <p className="font-semibold">Ver documento aquí</p>
                         </div>
                         <div className="p-6 flex justify-center animate-bounce">
-                            <a href={transparency.file_pdf} target="_blank"><img className="md:w-[100px] md:h-[100px] w-[80px] h-[80px]"  src="/imgpdf.png" alt="" /></a>
+                            <a href={transparency.file_pdf} target="_blank"><img className="md:w-[100px] md:h-[100px] w-[80px] h-[80px]"  src="./static/imgpdf.png" alt="" /></a>
                         </div>
                     </div>
                 </article>
