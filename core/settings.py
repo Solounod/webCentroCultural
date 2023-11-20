@@ -138,8 +138,7 @@ DATABASES = {
 
 CORS_ALLOWED_ORIGINS = [
     'https://centroculturalelespacio.onrender.com',
-    "http://localhost:8080",
-    "http://127.0.0.1:9000",
+    
 ]
 CORS_ALLOW_METHODS = (
     "DELETE",
