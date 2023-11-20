@@ -2,6 +2,10 @@ import multiprocessing
 from pathlib import Path
 import os
 
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 bind = "0.0.0.0:8000"
