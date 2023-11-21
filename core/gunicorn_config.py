@@ -8,7 +8,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-bind = "0.0.0.0:8000"
+bind = "0.0.0.0:10000"
 workers = multiprocessing.cpu_count() * 2 + 1
 loglevel = "info"
 errorlog = "-"
