@@ -1,3 +1,4 @@
+from django.utils.decorators import method_decorator
 from rest_framework.views import APIView
 from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
