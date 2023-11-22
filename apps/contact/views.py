@@ -7,10 +7,11 @@ from django.shortcuts import render
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from .serializers import EmailSerializer, LinkSocialSerializer
 from .models import LinkSocial
+from django.views.decorators.csrf import csrf_exempt
 
 
 # Create your views here.
-
+@csrf_exempt
 class EmailAPI(APIView):
     def post(self, request):
         serializer = EmailSerializer(data=request.data)
