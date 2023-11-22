@@ -11,7 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 # Create your views here.
-@csrf_exempt
+@method_decorator(csrf_exempt, name='dispatch')
 class EmailAPI(APIView):
     def post(self, request):
         serializer = EmailSerializer(data=request.data)
