@@ -12,7 +12,7 @@ export const apiLinkSocial = axios.create({
 export const postEmailContact =  (data) => apiEmailContact.post("/", data, {
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': document.cookie.split('csrftoken=')[1].split(';')[0]
+                
             },
         });
 
