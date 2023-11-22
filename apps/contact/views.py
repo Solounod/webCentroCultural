@@ -8,6 +8,7 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView
 from .serializers import EmailSerializer, LinkSocialSerializer
 from .models import LinkSocial
 
+
 # Create your views here.
 
 class EmailAPI(APIView):
